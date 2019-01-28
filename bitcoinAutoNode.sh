@@ -10,6 +10,7 @@ apt-get -y update
 apt-get -y install software-properties-common python-software-properties htop
 apt-get -y install git build-essential autoconf libboost-all-dev libssl-dev pkg-config
 apt-get -y install libprotobuf-dev protobuf-compiler libqt4-dev libqrencode-dev libtool
+# Ubuntu18.04: libdb4.8-java-gcj : Depends: libgcj-common (> 1:4.1.1-13) but it is not installable    Depends: libgcj-bc (>= 6.4.0-1~) but it is not installable
 apt-get -y install libcurl4-openssl-dev db4.8 libevent-dev
 
 echo "########### Creating Swap"
@@ -64,6 +65,7 @@ rm tempcron
 # only way I've been able to get it reliably to start on boot
 # (didn't want to use a service with systemd so it could be used with older ubuntu versions, but systemd is preferred)
 sed -i '2a\
+# Error rc.local not found
 sudo -u bitcoin /usr/local/bin/bitcoind -datadir=/home/bitcoin/.bitcoin' /etc/rc.local
 
 echo "############ Add an alias for easy use"
