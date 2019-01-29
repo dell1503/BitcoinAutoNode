@@ -3,7 +3,7 @@ echo "########### Changing to home dir"
 cd ~
 echo "########### Updating Ubuntu"
 sudo apt-get update && sudo apt-get -y upgrade
-sudo apt-add-repository ppa:bitcoin/bitcoin
+sudo apt-add-repository -y ppa:bitcoin/bitcoin
 sudo apt-get -y install bitcoind
 
 echo "########### Creating Swap"
