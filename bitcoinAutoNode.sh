@@ -1,11 +1,10 @@
 #!/bin/bash
-sudo bash
 echo "########### Changing to home dir"
 cd ~
 echo "########### Updating Ubuntu"
-apt-get update && sudo apt-get -y upgrade
-apt-add-repository ppa:bitcoin/bitcoin
-apt-get -y install bitcoind
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-add-repository ppa:bitcoin/bitcoin
+sudo apt-get -y install bitcoind
 
 echo "########### Creating Swap"
 #dd if=/dev/zero of=/swapfile bs=1M count=2048 ; mkswap /swapfile ; swapon /swapfile
