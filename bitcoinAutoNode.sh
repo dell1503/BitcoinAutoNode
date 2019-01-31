@@ -27,7 +27,7 @@ sudo echo "rpcpassword=$randPass" >> $config
 echo "############ Create Folders & Premissions"
 sudo mkdir $datadir
 sudo chmod -R a+rwx /home/ubuntu/.bitcoin
-sudo chmod -R a+rwx /media/bitcoin
+sudo chmod -R a+rwx $datadir
 
 echo "########### Setting up autostart (cron)"
 
