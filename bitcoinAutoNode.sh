@@ -30,8 +30,8 @@ sudo chmod u+x /root/script.sh
 echo "sh /root/script.sh &" >> /etc/rc.local
 
 # Ich dänke de Befehl sött nöd is Config file gschriebe werde sondern usgfüehrt werde oder? #
-# sudo echo "@reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf" >> /etc/crontab
-sudo @reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf #>> /etc/crontab
+sudo echo "@reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf" >> /etc/crontab
+#sudo @reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf #>> /etc/crontab
 
 /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf
 
