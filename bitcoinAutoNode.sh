@@ -28,7 +28,11 @@ sudo touch /root/script.sh
 sudo echo "/usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf" >> /root/script.sh
 sudo chmod u+x /root/script.sh
 echo "sh /root/script.sh &" >> /etc/rc.local
-sudo echo "@reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf" >> /etc/crontab
+
+# Ich dänke de Befehl sött nöd is Config file gschriebe werde sondern usgfüehrt werde oder? #
+# sudo echo "@reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf" >> /etc/crontab
+sudo @reboot /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf #>> /etc/crontab
 
 /usr/bin/bitcoind -daemon -conf=/usr/bin/bitcoin.conf
+
 # reboot
